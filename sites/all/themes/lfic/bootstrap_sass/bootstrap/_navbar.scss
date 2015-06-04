@@ -423,6 +423,7 @@
     }
     > .active > a {
       &,
+
       &:hover,
       &:focus {
         color: $navbar-default-link-active-color;

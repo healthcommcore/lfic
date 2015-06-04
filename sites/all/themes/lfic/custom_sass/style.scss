@@ -1,2 +1,78 @@
 @import '../bootstrap_sass/bootstrap.scss';
+@import './fonts.scss';
+
 /* variables */
+$osreg: 'OpenSansRegular';
+$oslight: 'OpenSansLight';
+$osbold: 'OpenSansBold';
+$osital: 'OpenSansItalic';
+$body-size: 1.7em;
+$dfci-red: #B21E3A;
+
+/* overall */
+
+body {
+  font-family: $osreg;
+  font-size: $body-size;
+}
+
+strong {
+  font-weight: normal;
+  font-family: $osbold;
+}
+
+.navbar-default {
+  background: #fff;
+  border: none;
+}
+
+.navbar-collapse {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: $dfci-red;
+  font-size: 1.3em;
+}
+
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #000;
+  background: none;
+}
+
+
+/* Home */
+
+.md-objects {
+  .quote-title {
+    font-family: $oslight;
+    font-size: 3.2em;
+  }
+  .quote {
+    font-size: 1.3em;
+	line-height: 1.3em;
+  }
+  .source {
+    margin-top: 20px;
+	line-height: 1.3em;
+	font-family: $osital;
+  }
+}
+
+.staff {
+  img {
+    float: left;
+	margin: 0 15px 20px 0;
+  }
+  p {
+    margin-top: 20px;
+  }
+  p:after {
+    content: "";
+	display: block;
+	clear: both;
+  }
+}
