@@ -1,13 +1,24 @@
-@import '../bootstrap_sass/bootstrap.scss';
 @import './fonts.scss';
 
-/* variables */
+/* Variables */
 $osreg: 'OpenSansRegular';
 $oslight: 'OpenSansLight';
 $osbold: 'OpenSansBold';
 $osital: 'OpenSansItalic';
 $body-size: 1.7em;
+$h1color: #999;
 $dfci-red: #B21E3A;
+
+/* Mixins */
+@mixin menustyle {
+	float: left;
+	list-style: none;
+}
+
+/* Helpers */
+.inline-block {
+  display: inline-block;
+}
 
 /* overall */
 
@@ -16,9 +27,25 @@ body {
   font-size: $body-size;
 }
 
+h1 {
+	color: $h1color;
+}
+
+h2 {
+	font-size: 1.5em;
+}
+
 strong {
   font-weight: normal;
   font-family: $osbold;
+}
+
+header.navbar {
+	margin-top: 20px;
+}
+
+.header-logo {
+	margin-bottom: 20px;
 }
 
 .navbar-default {
@@ -43,8 +70,72 @@ strong {
   background: none;
 }
 
+/* Content */
+.main-content-margin {
+  margin-top: 30px;
+}
+
+.panel {
+  margin-top: 10px;
+  h3 {
+    margin: 0;
+	font-size: 90%;
+	text-transform: uppercase;
+	letter-spacing: 0.09em;
+	font-weight: normal;
+	color: #666;
+  }
+  ul {
+    padding-right: 20px;
+  }
+}
+
+/* Footer stuff */
+
+.footer-logos,
+.footer-legal {
+	li {
+		@include menustyle;
+	}
+}
+
+.footer-legal {
+	ul {
+		padding-left: 0;
+		float: right;
+	}
+	li {
+		padding: 0 6px;
+		border-right: #000 1px solid;
+	}
+	li:first-child {
+	 padding-left: 0;
+	}
+	li:last-child {
+		border: none;
+	}
+	.legal {
+		text-align: right;
+		font-size: 80%;
+	}
+}
+
+.footer-logos {
+	a {
+		margin: 8px 20px 8px 0;
+		display: inline-block;
+	}
+}
 
 /* Home */
+
+.homepage-news {
+  margin-top: 30px;
+}
+
+.highlighted h1 {
+  color: #fff;
+}
 
 .md-objects {
   .quote-title {
@@ -74,5 +165,11 @@ strong {
     content: "";
 	display: block;
 	clear: both;
+  }
+}
+
+@media (max-width: 767px) {
+  .inline-block {
+    width: 100%;
   }
 }
