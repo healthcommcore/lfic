@@ -1,3 +1,4 @@
+@import '../bootstrap_sass/bootstrap.scss';
 @import './fonts.scss';
 
 /* Variables */
@@ -8,6 +9,7 @@ $osital: 'OpenSansItalic';
 $body-size: 1.7em;
 $h1color: #999;
 $dfci-red: #B21E3A;
+$gray: #999;
 
 /* Mixins */
 @mixin menustyle {
@@ -63,6 +65,8 @@ header.navbar {
   font-size: 1.3em;
 }
 
+/*
+*/
 .navbar-default .navbar-nav > .active > a, 
 .navbar-default .navbar-nav > .active-trail a, 
 .navbar-default .navbar-nav > .active > a:hover, 
@@ -93,6 +97,9 @@ header.navbar {
 
 /* Footer stuff */
 
+.footer {
+  padding: 50px 0;
+}
 .footer-logos,
 .footer-legal {
 	li {
@@ -177,19 +184,9 @@ header.navbar {
 }
 
 
+
 /* Tablet portrait only */
-@media (max-width: 1199px) and (min-width: 1024px) {
-  
-}
 
-@media (max-width: 1023px) and (min-width: 768px) {
-}
-
-@media (max-width: 1023px) {
-}
-
-@media (max-width: 991px) {
-}
 
 @media (max-width: 1199px) and (min-width: 992px) {
   .md-object h1,
@@ -319,11 +316,14 @@ header.navbar {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 639px) {
 /* Nav */
-  .navbar-collapse {
+  .navbar-default .navbar-collapse {
     padding-left: 15px;
     padding-right: 15px;
+    background: #eee;
+    border-bottom: $gray 1px solid;
+    border-top: $gray 1px solid;
   }
 
   .dropdown-menu {
@@ -332,10 +332,23 @@ header.navbar {
     position: relative;
     box-shadow: none;
     border: none;
-    margin-bottom: 10px;
+    margin: 10px 20px;
     margin-left: 20px;
+    li {
+      margin-bottom: 10px;
+    }
     li > a {
       display: inline-block;
+      white-space: normal;
+    }
+  }
+  .navbar-default .navbar-nav {
+    .dropdown-menu > li > a,
+    .dropdown-menu > li > .active > a {
+      color: #333;
+    }
+    .active .dropdown-menu a:hover {
+      color: #000;
     }
   }
 
@@ -344,6 +357,19 @@ header.navbar {
     .quote, .source {
       display: none;
     }
+  }
+
+/* misc */
+  .navbar-default .navbar-toggle {
+    border: $gray 2px solid;
+    .icon-bar {
+      background: $gray;
+    }
+  }
+
+
+  .btn {
+    white-space: normal;
   }
 }
 
