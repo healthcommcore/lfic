@@ -129,7 +129,7 @@
   <div class="row">
 
     <?php if (!empty($page['sidebar_first'])): ?>
-      <aside class="col-sm-3" role="complementary">
+      <aside class="col-sm-3 hidden-xs" role="complementary">
         <?php print render($page['sidebar_first']); ?>
       </aside>  <!-- /#sidebar-first -->
     <?php endif; ?>
@@ -179,12 +179,12 @@
 	<?php if (!empty($page['footer_logos']) || !empty($page['footer_legal'])): ?>
 		<div class="row">
 			<?php if (!empty($page['footer_logos'])): ?>
-				<div class="col-md-8 footer-logos">
+				<div class="col-md-7 footer-logos">
 					<?php print render($page['footer_logos']); ?>
 				</div>
 			<?php endif; ?>
 			<?php if (!empty($page['footer_legal'])): ?>
-				<div class="col-md-4 footer-legal">
+				<div class="col-md-5 footer-legal">
 					<?php print render($page['footer_legal']); ?>
 				</div>
 			<?php endif; ?>

@@ -10,7 +10,7 @@
  */
 function lfic_preprocess_page(&$variables) {
   if (!empty($variables['page']['sidebar_first']) || !empty($variables['page']['sidebar_second'])) {
-    $variables['content_column_class'] = ' class="col-md-9 col-sm-12"';
+    $variables['content_column_class'] = ' class="col-sm-9"';
   }
 	if ( isset($variables['navbar_classes_array']) ) {
 		if ($index = array_search('container', $variables['navbar_classes_array']) ) {
